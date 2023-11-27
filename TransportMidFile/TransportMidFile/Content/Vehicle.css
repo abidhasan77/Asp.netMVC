@@ -1,0 +1,119 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+}
+
+.vehicle {
+    background-image: url(image/.jpg);
+    background-position: inherit;
+    background-size: cover;
+    max-width: 100%;
+    background-repeat: space;
+    height: 540px;
+    width: auto;
+}
+
+
+.formV {
+    margin: auto;
+    background: ghostwhite;
+    max-width: 400px;
+    padding: 1px;
+    border-radius: 3px;
+    margin-top: 2rem;
+    margin-left: 24rem;
+}
+
+
+.form-group{
+
+    display: inline-block;
+    padding:1px;
+    width: 100%;
+    box-sizing:border-box
+}
+
+
+
+.user {
+    margin: auto;
+    background: transparent;
+    max-width: 250px;
+    padding: 3px;
+    border-radius: 4px;
+    position: absolute;
+    margin-top: -5.5rem;
+    margin-left: 66.6rem
+}
+
+h1 {
+    margin: auto;
+    background: lavender;
+    height: 85px;
+    padding: 1px;
+}
+
+
+
+.sd {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    left: -380%;
+    top: 17px;
+    text-decoration: blink;
+    color: white;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 700;
+    background-color: slategrey;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+.sb {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    left: -300%;
+    top: 17px;
+    text-decoration: blink;
+    color: white;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 700;
+    background-color: slategrey;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+.sa {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    left: -240%;
+    top: 17px;
+    text-decoration: blink;
+    color: white;
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 700;
+    background-color: slategrey;
+    padding: 7px;
+    border-radius: 3px;
+}
+
+
+.Home {
+    background-color: whitesmoke;
+    margin: auto;
+    background: ghostwhite;
+    max-width: 250px;
+    padding: 3px;
+    border-radius: 4px;
+    margin-top: -32.7rem;
+    margin-left: 0rem
+}

@@ -1,0 +1,94 @@
+﻿@model TransportMidFile.Models.TransportReg
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+
+<html>
+<head>
+
+</head>
+<body>
+    <div class="bck">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+       
+
+
+
+
+
+        <div class="top">
+
+            <div class="fdesign">
+
+
+
+                <div class="form-horizontal  ">
+
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                    @if (ViewBag.Message != "")
+                    {
+                        <div class="text-danger">*@ViewBag.Message</div>
+                    }
+
+
+
+
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.EmailID, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Email" name="EmailID" required="" autofocus="">
+                            </div>
+                            @Html.ValidationMessageFor(model => model.EmailID, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+
+
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10">
+                            <input type="password" class="form-control" placeholder="Password" name="Password" required="">
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                    <br />
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <input type="submit" value="Login" class="btn btn-default" />
+                        </div>
+                    </div>
+
+                    <div class="link">
+                        @Html.ActionLink("Register Now", "Registration", "Transport")
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        }
+
+        
+    </div>
+
+    @section Scripts{
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    }
+</body>
+</html>
+

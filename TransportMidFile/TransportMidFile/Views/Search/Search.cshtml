@@ -1,0 +1,60 @@
+﻿@model IEnumerable<TransportMidFile.Models.Vehiclelist>
+<br />
+<br />
+@using (Html.BeginForm("Search", "Search", FormMethod.Get))
+{
+    @Html.TextBox("searching")
+    <input type="submit" value="Search" />
+
+
+}
+
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>VehicleID</th>
+            <th>VehicleName</th>
+            <th>Type</th>
+            <th>StartingPoint</th>
+            <th>FinishingPoint</th>
+            <th>TotalSeat</th>
+            <th>Price</th>
+            <th>Offer</th>
+            <th>ExtraInfo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count() == 0)
+        {
+            <tr>
+                <td colspan="3" style="color: red">
+                    No match any Document
+                </td>
+            </tr>
+        }
+        else
+        {
+
+            foreach (var p in Model)
+            {
+    <tr>
+       
+
+        <td>@p.VehicleID</td>
+        <td>@p.VehicleName</td>
+        <td>@p.Type</td>
+        <td>@p.StartingPoint</td>
+        <td>@p.FinishingPoint</td>
+        <td>@p.TotalSeat</td>
+        <td>@p.Price</td>
+        <td>@p.Offer</td>
+        <td>@p.ExtraInfo</td>
+
+
+
+    </tr>
+}
+        }
+    </tbody>
+</table>

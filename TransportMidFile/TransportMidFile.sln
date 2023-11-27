@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransportMidFile", "TransportMidFile\TransportMidFile.csproj", "{36F33D1D-A7B6-4408-876E-BD32EE9D8B7B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{36F33D1D-A7B6-4408-876E-BD32EE9D8B7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36F33D1D-A7B6-4408-876E-BD32EE9D8B7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36F33D1D-A7B6-4408-876E-BD32EE9D8B7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36F33D1D-A7B6-4408-876E-BD32EE9D8B7B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {683A5913-926D-49DB-BE79-8D2023694BE5}
+	EndGlobalSection
+EndGlobal

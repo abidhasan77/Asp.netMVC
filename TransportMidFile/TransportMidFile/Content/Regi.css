@@ -1,0 +1,80 @@
+﻿* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+}
+
+
+
+.full {
+    background-image: url(image/hh.jpg);
+    background-size: cover;
+    max-width: 100%;
+    background-repeat: space;
+    height: 625px;
+    width: auto;
+}
+
+
+
+
+
+
+
+
+.regiform {
+    margin: auto;
+    background: transparent;
+    max-width: 450px;
+    padding: 29px;
+    border-radius: 4px;
+    margin-top: 6rem;
+    margin-left: 7rem;
+}
+
+
+input[type=number] {
+    height: 5px;
+    width: 100%;
+    background: whitesmoke;
+    padding: 9px;
+    border-radius: 4px;
+    margin-left: 0rem;
+}
+
+input[type=email] {
+    height: 15px;
+    width: 100%;
+    background: whitesmoke;
+    padding: 5px;
+    border-radius: 4px;
+    margin-left: 0rem;
+}
+
+input[type=text] {
+    height: 15px;
+    width: 100%;
+    background: whitesmoke;
+    padding: 5px;
+    border-radius: 4px;
+    margin-left: 0rem;
+}
+
+input[type=tel] {
+    height: 15px;
+    width: 100%;
+    background: whitesmoke;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+input[type=password] {
+    height: 15px;
+    width: 100%;
+    background: whitesmoke;
+    padding: 5px;
+    border-radius: 4px;
+}
+

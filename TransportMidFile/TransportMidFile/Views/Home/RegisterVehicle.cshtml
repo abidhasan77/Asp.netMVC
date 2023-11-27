@@ -1,0 +1,155 @@
+﻿@model TransportMidFile.Models.Vehiclelist
+
+
+@{
+    ViewBag.Title = "RegisterVehicle";
+}
+
+
+ 
+</table>
+
+<html>
+
+<body>
+    <div class="vehicle">
+
+
+
+        <div class="formV">
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+
+
+
+                <div class="form-horizontal">
+
+                    <hr />
+
+
+
+
+
+
+                </div>
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.VehicleID, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+
+                        <div class="form-group">
+                            <input type="number" class="form-control" placeholder="VehicleID" name="VehicleID" required="" autofocus="">
+                        </div>
+
+                        @Html.ValidationMessageFor(model => model.VehicleID, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.VehicleName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="VehicleName" name="VehicleName" required="" autofocus="">
+                        </div>
+                        @Html.ValidationMessageFor(model => model.VehicleName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Type, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+
+                        
+                            
+                                <select class="Type" name="Type" required>
+                                    <option value="AC">AC</option>
+                                    <option value="NON-AC">NON-AC</option>
+                                    <option value="Normal-Class">Normal-Class</option>
+                                    <option value="Buisness-Class">Buisness-Class</option>
+                                </select>
+                            
+                        
+                        @Html.ValidationMessageFor(model => model.Type, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.StartingPoint, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="StartingPoint" name="StartingPoint" required="Please Fill it Up" autofocus="">
+                        </div>
+                        @Html.ValidationMessageFor(model => model.StartingPoint, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.FinishingPoint, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="FinishingPoint" name="FinishingPoint" required="Please Fill it Up" autofocus="">
+                        </div>
+                        @Html.ValidationMessageFor(model => model.FinishingPoint, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.TotalSeat, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="TotalSeat" name="TotalSeat" required="Please Fill it Up" autofocus="">
+                        </div>
+                        @Html.ValidationMessageFor(model => model.TotalSeat, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Price" name="Price" required="Please Fill it Up" autofocus="">
+                        </div>
+                        @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Offer, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Offer, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Offer, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ExtraInfo, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.ExtraInfo, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.ExtraInfo, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </div>
+                </div>
+
+            }
+        </div>
+
+        <div class="Home">
+            @Html.ActionLink("Home", "Index")
+
+        </div>
+    </div>
+    @section Scripts{
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    }
+

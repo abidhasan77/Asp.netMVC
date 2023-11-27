@@ -1,0 +1,95 @@
+﻿
+@{
+    ViewBag.Title = "VehicleShow";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+
+    <div class="homex">
+
+
+        <h1>Travel.Com</h1>
+
+
+
+        <div class="user">
+
+            <a class="sd" href="/Home/RegisterVehicle">Register Vehicle</a>
+            <a class="sb" href="/Home/VehicleShow">Vehicle List</a>
+            <a class="sa" href="/Home/Inq">Inquery</a>
+
+            Welcome @HttpContext.Current.User.Identity.Name
+            @if (Request.IsAuthenticated)
+            {
+                using (Html.BeginForm("Logout", "Transport", FormMethod.Post, new { id = "logoutForm" }))
+                {<a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
+                }
+            }
+
+        </div>
+
+
+
+
+
+        <table>
+            <tr>
+                <th>VehicleID</th>
+                <th>VehicleName</th>
+                <th>Type</th>
+                <th>StartingPoint</th>
+                <th>FinishingPoint</th>
+                <th>TotalSeat</th>
+                <th>Price</th>
+                <th>Offer</th>
+                <th>ExtraInfo</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+            @foreach (var p in Model)
+            {
+                <tr>
+                    <td>@p.VehicleID</td>
+                    <td>@p.VehicleName</td>
+                    <td>@p.Type</td>
+                    <td>@p.StartingPoint</td>
+                    <td>@p.FinishingPoint</td>
+                    <td>@p.TotalSeat</td>
+                    <td>@p.Price</td>
+                    <td>@p.Offer</td>
+                    <td>@p.ExtraInfo</td>
+                    <td><a href="/Home/VehicleEdit/@p.VehicleID">Edit</a></td>
+                    <td><a href="/Home/delete/@p.VehicleID">delete</a></td>
+
+                </tr>
+            }
+            <a href="/Home/Index">back</a>
+        </table>
+
+</body>
+</html>
+

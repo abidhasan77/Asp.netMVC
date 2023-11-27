@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "TSPDashbord";
+}
+
+<h2>TSPDashbord</h2>
+
+<html>
+<head>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+    @if (TempData["name"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            <p> LOG IN SUCCESSFULL</p>
+        </div>
+    }
+
+
+
+
+    <form id="search-form" action="/results" class="style-scope ytd-searchbox">
+        <div id="container" class="style-scope ytd-searchbox">
+            <yt-icon id="search-icon" class="style-scope ytd-searchbox"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+            <div id="search-input" class="ytd-searchbox-spt" slot="search-input"><input id="search" autocapitalize="none" autocomplete="off" autocorrect="off" name="search_query" tabindex="0" type="text" spellcheck="false" placeholder="Search" aria-label="Search" role="combobox" aria-haspopup="false" aria-autocomplete="list" dir="ltr" class="ytd-searchbox" style="outline: none;"></div>
+            <div id="search-clear-button" class="style-scope ytd-searchbox" hidden=""><ytd-button-renderer class="style-scope ytd-searchbox style-default size-default" use-keyboard-focused="" button-renderer="true" is-icon-button="" has-no-text=""><a class="yt-simple-endpoint style-scope ytd-button-renderer" tabindex="-1"><yt-icon-button id="button" class="style-scope ytd-button-renderer style-default size-default"><!--css-build:shady--><button id="button" class="style-scope yt-icon-button" aria-label="Clear search query"><yt-icon class="style-scope ytd-button-renderer"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M12.7,12l6.6,6.6l-0.7,0.7L12,12.7l-6.6,6.6l-0.7-0.7l6.6-6.6L4.6,5.4l0.7-0.7l6.6,6.6l6.6-6.6l0.7,0.7L12.7,12z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon></button><yt-interaction id="interaction" class="circular style-scope yt-icon-button"><!--css-build:shady--><div class="stroke style-scope yt-interaction"></div><div class="fill style-scope yt-interaction"></div></yt-interaction></yt-icon-button></a></ytd-button-renderer></div>
+            <button id="searchbox-button" class="style-scope ytd-searchbox" hidden="" aria-label="Search">
+                <yt-icon class="style-scope ytd-searchbox"><svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false" class="style-scope yt-icon" style="pointer-events: none; display: block; width: 100%; height: 100%;"><g class="style-scope yt-icon"><path d="M20.87,20.17l-5.59-5.59C16.35,13.35,17,11.75,17,10c0-3.87-3.13-7-7-7s-7,3.13-7,7s3.13,7,7,7c1.75,0,3.35-0.65,4.58-1.71 l5.59,5.59L20.87,20.17z M10,16c-3.31,0-6-2.69-6-6s2.69-6,6-6s6,2.69,6,6S13.31,16,10,16z" class="style-scope yt-icon"></path></g></svg><!--css-build:shady--></yt-icon>
+                <tp-yt-paper-tooltip prefix="" class="style-scope ytd-searchbox" role="tooltip" tabindex="-1">
+                    <!--css-build:shady--><div id="tooltip" class="hidden style-scope tp-yt-paper-tooltip" style-target="tooltip">
+                        Search
+                    </div>
+                </tp-yt-paper-tooltip>
+            </button>
+        </div>
+        <div id="search-container" class="ytd-searchbox-spt " slot="search-container"></div>
+    </form>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

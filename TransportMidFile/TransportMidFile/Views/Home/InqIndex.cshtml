@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "InqIndex";
+}
+
+
+
+
+<h2>InqIndex</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Question</th>
+        <th>Answer</th>
+    </tr>
+    @foreach (var h in Model)
+    {
+        <tr>
+            <td>@h.Id</td>
+            <td>@h.Name</td>
+            <td>@h.Question</td>
+            <td>@h.Answer</td>
+
+
+        </tr>
+    }
+</table>
+<td><a class="btn btn-info" href="/Home/Index/">Back</a></td>

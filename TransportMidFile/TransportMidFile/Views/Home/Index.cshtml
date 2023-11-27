@@ -1,0 +1,64 @@
+﻿
+@model IEnumerable<TransportMidFile.Models.Vehiclelist>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+@using (Html.BeginForm("Search", "Search", FormMethod.Get))
+{
+    <div class="search">
+
+        @Html.TextBox("searching")
+        <input type="submit" value="Search" />
+
+    </div>
+        }
+
+        <html>
+        <body>
+            <div class="home">
+
+
+                <h1>Travel.Com</h1>
+
+
+
+                <div class="user">
+
+                    <a class="sd" href="/Home/RegisterVehicle">Register Vehicle</a>
+                    <a class="sb" href="/Home/VehicleShow">Vehicle List</a>
+                    <a class="sa" href="/Home/Inq">Inquery</a>
+
+                    Welcome @HttpContext.Current.User.Identity.Name
+                    @if (Request.IsAuthenticated)
+                    {
+                        using (Html.BeginForm("Logout", "Transport", FormMethod.Post, new { id = "logoutForm" }))
+                        {<a href="javascript:document.getElementById('logoutForm').submit()">Logout</a>
+                        }
+                    }
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+                @section Scripts{
+                    <script src="~/Scripts/jquery.validate.min.js"></script>
+                    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+                }
+
+
+            </div>
+
+
+        </body>
+    </html>
+
+

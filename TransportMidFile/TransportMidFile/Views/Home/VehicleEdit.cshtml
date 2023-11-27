@@ -1,0 +1,53 @@
+﻿@model TransportMidFile.Models.Vehiclelist
+
+@{
+    ViewBag.Title = "";
+}
+
+
+
+<form action="" method="post">
+
+    <label for="VehicleID"><b>VehicleID</b></label>
+    <input type="number" name="VehicleID" value="@Model.VehicleID" class="form-control" />
+    <br />
+    <label for="VehicleName"><b>VehicleName</b></label>
+    <input type="text" name="VehicleName" value="@Model.VehicleName" class="form-control" />
+    <br />
+    <select class="Type" name="Type" required>
+        <option value="AC">AC</option>
+        <option value="NON-AC">NON-AC</option>
+        <option value="Normal-Class">Normal-Class</option>
+        <option value="Buisness-Class">Buisness-Class</option>
+    </select>
+
+    <br />
+    <label for="StartingPoint"><b>StartingPoint</b></label>
+    <input type="text" name="StartingPoint" value="@Model.StartingPoint" class="form-control" />
+    <br />
+    <label for="FinishingPoint"><b>FinishingPoint</b></label>
+    <input type="text" name="FinishingPoint" value="@Model.FinishingPoint" class="form-control" />
+    <br />
+    <label for="TotalSeat"><b>TotalSeat</b></label>
+    <input type="text" name="TotalSeat" value="@Model.TotalSeat" class="form-control" />
+    <br />
+    <label for="Price"><b>Price</b></label>
+    <input type="text" name="Price" value="@Model.Price" class="form-control" />
+    <br />
+    <label for="Offer"><b>Offer</b></label>
+    <input type="text" name="Offer" value="@Model.Offer" class="form-control" />
+    <br />
+    <label for="ExtraInfo"><b>ExtraInfo</b></label>
+    <input type="text" name="ExtraInfo" value="@Model.ExtraInfo" class="form-control" />
+    <br />
+
+
+
+
+
+    <input type="submit" value="Update" class="btn btn-success" />
+
+</form>
+
+    </div>
+</div>
